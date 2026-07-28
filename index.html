@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akaru Endo — Technical College Students portfolio." />
+  <title>Akaru Endo — Technical College Students</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading overlay is removed once the page has finished loading. -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__word">A.K<span>®</span></div>
+    <div class="loader__line"><i></i></div>
+    <div class="loader__count">00</div>
+  </div>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand magnetic" href="#top" aria-label="Akiru Endo home">A<span>.</span>E</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle magnetic" aria-expanded="false" aria-controls="mobile-menu">
+      <span>Menu</span><i></i>
+    </button>
+  </header>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="#about">About <em>01</em></a>
+    <a href="#work">Selected work <em>02</em></a>
+    <a href="#skills">Capabilities <em>03</em></a>
+    <a href="#contact">Contact <em>04</em></a>
+  </nav>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero section">
+      <div class="hero__meta reveal-up"><span>Mie / Japan</span><span>Available for selected projects</span></div>
+      <p class="eyebrow reveal-up">NLP Engineer & Creative Developer</p>
+      <h1 class="hero__title" aria-label="Making language interactive, intelligent, and human">
+        <span class="hero__line"><span>Giving</span> <i>words</i></span>
+        <span class="hero__line hero__line--indent"><span>a new</span> <i>dimension.</i></span>
+      </h1>
+      <div class="hero__bottom reveal-up">
+        <p>Bridging natural language processing and technology<br />to shape smarter, human-centered digital experiences.</p>
+        <a class="circle-link magnetic" href="#work"><span>Scroll to<br />explore</span><b>↓</b></a>
+      </div>
+      <div class="orb orb--hero" aria-hidden="true"></div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-label="Natural Language Processing · Machine Learning · Software Engineering">
+      <div class="marquee__track"><span>Natural language processing</span><b>✳</b><span>Machine learning</span><b>✳</b><span>Software engineering</span><b>✳</b><span>Natural language processing</span><b>✳</b><span>Machine learning</span><b>✳</b><span>Software engineering</span><b>✳</b></div>
+    </div>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="section-label reveal-up"><span>(01)</span><span>About me</span></div>
+      <div class="about__content">
+        <p class="about__lead reveal-up">I bridge the gap between <i>human language</i> and technology — exploring how NLP can make software feel more intuitive, expressive, and smart.</p>
+        <div class="about__lower reveal-up">
+          <p>I'm Akiru, a Tokyo-based developer deeply fascinated by Machine Learning and Natural Language Processing. Grounded in solid fundamental engineering and global communication skills, I build intelligent systems with a refined touch.</p>
+          <a class="text-link magnetic" href="#contact">More about me <span>↗</span></a>
+        </div>
+      </div>
+      <div class="about__stamp reveal-scale" aria-hidden="true"><span>POWERED BY</span><b>✳</b><span>DATA & CURIOSITY</span></div>
+    </section>
+
+    <!-- Projects -->
+    <section class="work section" id="work">
+      <div class="section-label reveal-up"><span>(02)</span><span>Credentials</span></div>
+      <div class="project-list">
+        <div class="project reveal-up">
+          <div class="project__number">01</div>
+          <div class="project__visual project__visual--one"><div class="shape shape--arch"></div><div class="shape shape--sun"></div></div>
+          <div class="project__info"><h2>FE<br /><i>Certified</i></h2><p>Fundamental Information Technology Engineer<br />National Certification</p></div>
+        </div>
+        <div class="project project--right reveal-up">
+          <div class="project__number">02</div>
+          <div class="project__visual project__visual--two"><div class="shape shape--disc"></div><div class="shape shape--cut"></div></div>
+          <div class="project__info"><h2>TOEIC<br /><i>865</i></h2><p>Global Communication<br />Advanced English Proficiency</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills section" id="skills">
+      <div class="section-label reveal-up"><span>(03)</span><span>Capabilities</span></div>
+      <div class="skills__grid">
+        <div class="skills__intro reveal-up"><p>Where deep learning meets solid engineering foundation and global vision.</p><div class="orb orb--small" aria-hidden="true"></div></div>
+        <ul class="skills__list">
+          <li class="reveal-up"><span>01</span><strong>Natural Language Processing</strong><em>LLMs, Text Analysis & Semantics</em></li>
+          <li class="reveal-up"><span>02</span><strong>Machine Learning</strong><em>Model Experiments & Prototyping</em></li>
+          <li class="reveal-up"><span>03</span><strong>Software Fundamentals</strong><em>IT Engineering Certified Basics</em></li>
+          <li class="reveal-up"><span>04</span><strong>Global Communication</strong><em>TOEIC 865 Professional English</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="section-label reveal-up"><span>(04)</span><span>Contact</span></div>
+      <p class="contact__kicker reveal-up">Got a cool project or idea?</p>
+      <a class="contact__email magnetic reveal-up" href="mailto:hello@akirue.dev">Let's build<br /><i>something.</i> <span>↗</span></a>
+      <div class="contact__footer reveal-up">
+        <p>Open for tech talk, collaboration,<br />or just talking about AI &amp; NLP.</p>
+        <div>
+          <a href="https://www.linkedin.com/in/%E6%98%8E%E7%91%A0-%E9%81%A0%E8%97%A4-668866425/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/akaru-endo" target="_blank" rel="noopener">Github ↗</a>
+        </div>
+        <span>© <span id="year"></span> A.E.</span>
+      </div>
+      
+      <div class="orb orb--contact" aria-hidden="true"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
