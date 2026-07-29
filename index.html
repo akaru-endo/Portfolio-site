@@ -19,11 +19,20 @@
   </div>
 
   <div class="noise" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="progress-rail" aria-hidden="true"><span></span></div>
+  <aside class="side-index" aria-label="Page sections">
+    <a class="side-index__item is-active" href="#top"><i></i><span>Home</span></a>
+    <a class="side-index__item" href="#about"><i></i><span>About</span></a>
+    <a class="side-index__item" href="#work"><i></i><span>Work</span></a>
+    <a class="side-index__item" href="#skills"><i></i><span>Skills</span></a>
+    <a class="side-index__item" href="#contact"><i></i><span>Contact</span></a>
+  </aside>
   <div class="cursor" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Akiru Endo home">A<span>.</span>E</a>
+    <a class="brand magnetic" href="#top" aria-label="Akaru Endo home">A<span>.</span>E</a>
     <nav class="nav" aria-label="Main navigation">
       <a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
     </nav>
@@ -43,17 +52,26 @@
     <!-- Hero -->
     <section class="hero section">
       <div class="hero__meta reveal-up"><span>Mie / Japan</span><span>Available for selected projects</span></div>
-      <p class="eyebrow reveal-up">NLP Engineer & Creative Developer</p>
+      <p class="eyebrow reveal-up">a Student at Kindai Kosen</p>
       <h1 class="hero__title" aria-label="Making language interactive, intelligent, and human">
         <span class="hero__line"><span>Giving</span> <i>words</i></span>
         <span class="hero__line hero__line--indent"><span>a new</span> <i>dimension.</i></span>
       </h1>
+      <div class="hero__coordinates" aria-hidden="true"><span>34.6293 N</span><span>136.1132 E</span></div>
       <div class="hero__bottom reveal-up">
         <p>Bridging natural language processing and technology<br />to shape smarter, human-centered digital experiences.</p>
         <a class="circle-link magnetic" href="#work"><span>Scroll to<br />explore</span><b>↓</b></a>
       </div>
+      <div class="hero-objects" aria-hidden="true">
+        <div class="hero-object hero-object--blue"></div>
+        <div class="hero-object hero-object--yellow"></div>
+        <div class="hero-object hero-object--pink"></div>
+        <div class="hero-object hero-object--rod"></div>
+      </div>
       <div class="orb orb--hero" aria-hidden="true"></div>
     </section>
+
+    <div class="transition transition--intro" aria-hidden="true"><span>01</span><span>Made slowly. Felt instantly.</span><i></i><div class="transition__entry"><small>Entering</small><strong>About</strong></div><div class="transition__ticks"></div></div>
 
     <!-- Marquee -->
     <div class="marquee" aria-label="Natural Language Processing · Machine Learning · Software Engineering">
@@ -66,12 +84,14 @@
       <div class="about__content">
         <p class="about__lead reveal-up">I bridge the gap between <i>human language</i> and technology — exploring how NLP can make software feel more intuitive, expressive, and smart.</p>
         <div class="about__lower reveal-up">
-          <p>I'm Akiru, a Tokyo-based developer deeply fascinated by Machine Learning and Natural Language Processing. Grounded in solid fundamental engineering and global communication skills, I build intelligent systems with a refined touch.</p>
+          <p>I'm Akaru, a student at Kindai Kosen in Mie, studying Control and Information Engineering. Currently, I'm deeply fascinated by Machine Learning.</p>
           <a class="text-link magnetic" href="#contact">More about me <span>↗</span></a>
         </div>
       </div>
-      <div class="about__stamp reveal-scale" aria-hidden="true"><span>POWERED BY</span><b>✳</b><span>DATA & CURIOSITY</span></div>
+      <div class="about__stamp reveal-scale" aria-hidden="true"><span>POWERED BY</span><b>✳</b><span>DATA &amp; CURIOSITY</span></div>
     </section>
+
+    <div class="transition transition--about" aria-hidden="true"><i></i><span>Scroll to discover</span><span>02 / 04</span><div class="transition__entry"><small>Next chapter</small><strong>Credentials</strong></div><div class="transition__ticks"></div></div>
 
     <!-- Projects -->
     <section class="work section" id="work">
@@ -90,19 +110,23 @@
       </div>
     </section>
 
+    <div class="transition transition--work" aria-hidden="true"><span>Credentials &amp; Vision</span><div class="transition__orbital"><i></i><b>+</b></div><span>Every detail has a reason</span><div class="transition__entry"><small>In focus</small><strong>Capabilities</strong></div><div class="transition__ticks"></div></div>
+
     <!-- Skills -->
     <section class="skills section" id="skills">
       <div class="section-label reveal-up"><span>(03)</span><span>Capabilities</span></div>
       <div class="skills__grid">
         <div class="skills__intro reveal-up"><p>Where deep learning meets solid engineering foundation and global vision.</p><div class="orb orb--small" aria-hidden="true"></div></div>
         <ul class="skills__list">
-          <li class="reveal-up"><span>01</span><strong>Natural Language Processing</strong><em>LLMs, Text Analysis & Semantics</em></li>
-          <li class="reveal-up"><span>02</span><strong>Machine Learning</strong><em>Model Experiments & Prototyping</em></li>
+          <li class="reveal-up"><span>01</span><strong>Natural Language Processing</strong><em>LLMs, Text Analysis &amp; Semantics</em></li>
+          <li class="reveal-up"><span>02</span><strong>Machine Learning</strong><em>Model Experiments &amp; Prototyping</em></li>
           <li class="reveal-up"><span>03</span><strong>Software Fundamentals</strong><em>IT Engineering Certified Basics</em></li>
           <li class="reveal-up"><span>04</span><strong>Global Communication</strong><em>TOEIC 865 Professional English</em></li>
         </ul>
       </div>
     </section>
+
+    <div class="transition transition--skills" aria-hidden="true"><span>Intelligent systems</span><i></i><span>Precise execution</span><div class="transition__entry"><small>Open channel</small><strong>Contact</strong></div><div class="transition__ticks"></div></div>
 
     <!-- Contact -->
     <section class="contact section" id="contact">
@@ -117,8 +141,8 @@
         </div>
         <span>© <span id="year"></span> A.E.</span>
       </div>
-      
       <div class="orb orb--contact" aria-hidden="true"></div>
+      <div class="contact__grid" aria-hidden="true"></div>
     </section>
   </main>
   <script src="script.js"></script>

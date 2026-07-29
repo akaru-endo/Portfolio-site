@@ -64,4 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.querySelector('span').textContent = open ? 'Close' : 'Menu';
   });
   menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+  // Give the header and the slim progress rail a response to page movement.
+  const header = document.querySelector('.site-header');
+  const progressRail = document.querySelector('.progress-rail span');
+  const updateScrollDetails = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const amount = max > 0 ? (window.scrollY / max) * 100 : 0;
+    progressRail.style.width = `${amount}%`;
+    header.classList.toggle('is-scrolled', window.scrollY > 32);
+  };
+  window.addEventListener('scroll', updateScrollDetails, { passive: true });
+  updateScrollDetails();
+
+  // Keep the small right-side index in sync with the section currently in view.
+  const indexLinks = document.querySelectorAll('.side-index__item');
+  const trackedSections = document.querySelectorAll('main > section[id], .hero');
+  const indexObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id || 'top';
+      indexLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`));
+    });
+  }, { rootMargin: '-42% 0px -42% 0px', threshold: 0 });
+  trackedSections.forEach((section) => indexObserver.observe(section));
+
+  // Transition strips have their own staggered reveal, so moving between chapters feels intentional.
+  const transitionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        transitionObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.45 });
+  document.querySelectorAll('.transition').forEach((transition) => transitionObserver.observe(transition));
 });
