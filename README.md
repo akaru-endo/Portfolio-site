@@ -14,4 +14,5 @@ Kinetic Typography やインタラクティブなアニメーションを取り�
 .
 ├── index.html
 ├── style.css
+├── script.js
 └── images/
