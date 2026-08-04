@@ -1,148 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Akaru Endo — Technical College Students portfolio." />
-  <title>Akaru Endo — Technical College Students</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Akaru Endo, Student interested in Natural Language Processing." />
+  <title>Akaru Endo - Student at Kindai Kosen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Loading overlay is removed once the page has finished loading. -->
-  <div class="loader" aria-hidden="true">
-    <div class="loader__word">A.K<span>®</span></div>
-    <div class="loader__line"><i></i></div>
-    <div class="loader__count">00</div>
+  <div class="loader" aria-hidden="true"><div class="loader__name">A<span>E</span></div><div class="loader__bar"><i></i></div><small>Initializing models... <b>00</b></small></div>
+  <div class="cursor" aria-hidden="true"></div><div class="cursor-dot" aria-hidden="true"></div>
+  <div class="scroll-meter" aria-hidden="true"><i></i></div>
+  <div class="math-field" aria-hidden="true"></div>
+
+  <header class="header">
+    <a href="#top" class="wordmark magnetic" aria-label="Akaru Endo home">A<span>E</span><sup>R</sup></a>
+    <nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#research">Research & Work</a><a href="#interest">Interests</a></nav>
+    <a href="#contact" class="header__contact magnetic">Contact <span>+</span></a>
+    <button class="menu" aria-expanded="false" aria-controls="menu-panel"><i></i><i></i><span>Menu</span></button>
+  </header>
+  <div class="menu-panel" id="menu-panel">
+    <a href="#about"><em>01</em>About</a><a href="#research"><em>02</em>Research & Work</a><a href="#interest"><em>03</em>Interests</a><a href="#contact"><em>04</em>Contact</a>
+    <p>Mie, Japan<br />Kindai Kosen</p>
   </div>
 
-  <div class="noise" aria-hidden="true"></div>
-  <div class="page-glow" aria-hidden="true"></div>
-  <div class="progress-rail" aria-hidden="true"><span></span></div>
-  <aside class="side-index" aria-label="Page sections">
-    <a class="side-index__item is-active" href="#top"><i></i><span>Home</span></a>
-    <a class="side-index__item" href="#about"><i></i><span>About</span></a>
-    <a class="side-index__item" href="#work"><i></i><span>Work</span></a>
-    <a class="side-index__item" href="#skills"><i></i><span>Skills</span></a>
-    <a class="side-index__item" href="#contact"><i></i><span>Contact</span></a>
-  </aside>
-  <div class="cursor" aria-hidden="true"></div>
-  <div class="cursor-dot" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Akaru Endo home">A<span>.</span>E</a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="menu-toggle magnetic" aria-expanded="false" aria-controls="mobile-menu">
-      <span>Menu</span><i></i>
-    </button>
-  </header>
-
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <a href="#about">About <em>01</em></a>
-    <a href="#work">Selected work <em>02</em></a>
-    <a href="#skills">Capabilities <em>03</em></a>
-    <a href="#contact">Contact <em>04</em></a>
-  </nav>
-
   <main id="top">
-    <!-- Hero -->
-    <section class="hero section">
-      <div class="hero__meta reveal-up"><span>Mie / Japan</span><span>Available for selected projects</span></div>
-      <p class="eyebrow reveal-up">a Student at Kindai Kosen</p>
-      <h1 class="hero__title" aria-label="Making language interactive, intelligent, and human">
-        <span class="hero__line"><span>Giving</span> <i>words</i></span>
-        <span class="hero__line hero__line--indent"><span>a new</span> <i>dimension.</i></span>
-      </h1>
-      <div class="hero__coordinates" aria-hidden="true"><span>34.6293 N</span><span>136.1132 E</span></div>
-      <div class="hero__bottom reveal-up">
-        <p>Bridging natural language processing and technology<br />to shape smarter, human-centered digital experiences.</p>
-        <a class="circle-link magnetic" href="#work"><span>Scroll to<br />explore</span><b>↓</b></a>
-      </div>
-      <div class="hero-objects" aria-hidden="true">
-        <div class="hero-object hero-object--blue"></div>
-        <div class="hero-object hero-object--yellow"></div>
-        <div class="hero-object hero-object--pink"></div>
-        <div class="hero-object hero-object--rod"></div>
-      </div>
-      <div class="orb orb--hero" aria-hidden="true"></div>
+    <section class="hero">
+      <div class="hero__topline"><span>Student / NLP Interest</span><span>Kindai Kosen</span></div>
+      <div class="hero__image-wrap reveal-image"><img class="hero__image" src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1800&q=85" alt="Abstract light" /><div class="hero__image-tint"></div></div>
+      <div class="hero__motion" aria-hidden="true"><span>I(X;Y) = H(X) + H(Y) - H(X,Y) = ∑_{x∈X} ∑_{y∈Y} p(x,y) log₂ ( p(x,y) / (p(x)p(y)) )</span><span>F(ω) = ∫_{-∞}^{∞} f(t) e^{-i ω t} dt</span><span>D_{KL}(P ∥ Q) = ∑_{i} P(i) log( P(i) / Q(i) )</span></div>
+      
+      <!-- ▼ キャッチコピーをNLP探究向けに変更 -->
+      <p class="hero__note reveal-up">Exploring the boundaries of<br /><i>human language</i> and machine intelligence.</p>
+      
+      <h1 class="hero__title"><span class="hero__title-top">AKARU</span><span class="hero__title-bottom">ENDO<em>.</em></span></h1>
+      <div class="hero__bottom"><span>(Scroll to explore)</span><a class="hero__disc magnetic" href="#about"><b>Explore</b><i>Down</i></a><span>34.6141 N / 136.1306 E</span></div>
     </section>
 
-    <div class="transition transition--intro" aria-hidden="true"><span>01</span><span>Made slowly. Felt instantly.</span><i></i><div class="transition__entry"><small>Entering</small><strong>About</strong></div><div class="transition__ticks"></div></div>
+    <div class="ticker" aria-label="Natural Language Processing, Machine Learning, Information Theory"><div class="ticker__track"><span>Natural Language Processing</span><b>*</b><span>Machine Learning</span><b>*</b><span>Information Theory</span><b>*</b><span>Natural Language Processing</span><b>*</b><span>Machine Learning</span><b>*</b><span>Information Theory</span><b>*</b></div></div>
 
-    <!-- Marquee -->
-    <div class="marquee" aria-label="Natural Language Processing · Machine Learning · Software Engineering">
-      <div class="marquee__track"><span>Natural language processing</span><b>✳</b><span>Machine learning</span><b>✳</b><span>Software engineering</span><b>✳</b><span>Natural language processing</span><b>✳</b><span>Machine learning</span><b>✳</b><span>Software engineering</span><b>✳</b></div>
-    </div>
-
-    <!-- About -->
-    <section class="about section" id="about">
-      <div class="section-label reveal-up"><span>(01)</span><span>About me</span></div>
-      <div class="about__content">
-        <p class="about__lead reveal-up">I bridge the gap between <i>human language</i> and technology — exploring how NLP can make software feel more intuitive, expressive, and smart.</p>
-        <div class="about__lower reveal-up">
-          <p>I'm Akaru, a student at Kindai Kosen in Mie, studying Control and Information Engineering. Currently, I'm deeply fascinated by Machine Learning.</p>
-          <a class="text-link magnetic" href="#contact">More about me <span>↗</span></a>
+    <!-- ▼ About（自然言語処理を学びたい学生としての自己紹介） -->
+    <section class="about section-dark" id="about">
+      <div class="section-tag"><span>(01)</span><span>About</span><span>Scroll slowly</span></div>
+      <div class="about__layout">
+        <div class="about__portrait reveal-image"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7450?auto=format&fit=crop&w=1000&q=85" alt="Night sky" /><span>AE / 01</span></div>
+        <div class="about__copy">
+          <p class="about__headline reveal-up">How machines<br />understand <i>words.</i></p>
+          <div class="about__body reveal-up">
+            <p>近畿高専で情報工学を学ぶ学生です。人間が使う「言葉」をコンピュータがどのように理解し、処理できるのかに興味を持ち、自然言語処理（NLP）分野の研究・学習に取り組んでいます。</p>
+            <a href="#contact" class="line-link magnetic">Get in touch <span>+</span></a>
+          </div>
         </div>
       </div>
-      <div class="about__stamp reveal-scale" aria-hidden="true"><span>POWERED BY</span><b>✳</b><span>DATA &amp; CURIOSITY</span></div>
+      <div class="about__star" aria-hidden="true">*<span>Driven by curiosity</span></div>
     </section>
 
-    <div class="transition transition--about" aria-hidden="true"><i></i><span>Scroll to discover</span><span>02 / 04</span><div class="transition__entry"><small>Next chapter</small><strong>Credentials</strong></div><div class="transition__ticks"></div></div>
+    <div class="interlude interlude--light reveal-break"><div class="interlude__panels"><i></i><i></i><i></i></div><p>Bridging language<br /><i>and computation.</i></p><div class="interlude__line"></div><span>02 / Research & Projects</span></div>
 
-    <!-- Projects -->
-    <section class="work section" id="work">
-      <div class="section-label reveal-up"><span>(02)</span><span>Credentials</span></div>
-      <div class="project-list">
-        <div class="project reveal-up">
-          <div class="project__number">01</div>
-          <div class="project__visual project__visual--one"><div class="shape shape--arch"></div><div class="shape shape--sun"></div></div>
-          <div class="project__info"><h2>FE<br /><i>Certified</i></h2><p>Fundamental Information Technology Engineer<br />National Certification</p></div>
-        </div>
-        <div class="project project--right reveal-up">
-          <div class="project__number">02</div>
-          <div class="project__visual project__visual--two"><div class="shape shape--disc"></div><div class="shape shape--cut"></div></div>
-          <div class="project__info"><h2>TOEIC<br /><i>865</i></h2><p>Global Communication<br />Advanced English Proficiency</p></div>
-        </div>
+    <!-- ▼ Work → Research & Projects（研究・実装物・学習プロジェクト） -->
+    <section class="work section-light" id="research">
+      <div class="section-tag section-tag--dark"><span>(02)</span><span>Research & Work</span><span>Present</span></div>
+      <div class="work__intro"><h2>Selected<br /><i>projects.</i></h2><p>これまでに取り組んだ実装、実験、または興味を持って進めている研究テーマです。</p></div>
+      <div class="project-grid">
+        <a class="project project--wide reveal-up" href="#contact"><div class="project__media"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1800&q=85" alt="Data visualization" /><span class="project__index">01</span><span class="project__view">View details <b>+</b></span></div><div class="project__meta"><h3>TEXT<br /><i>ANALYSIS</i></h3><p>NLP / Python<br />2026</p></div></a>
+        <a class="project project--offset reveal-up" href="#contact"><div class="project__media"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85" alt="Abstract computational node" /><span class="project__index">02</span><span class="project__view">View details <b>+</b></span></div><div class="project__meta"><h3>LANGUAGE<br /><i>MODELING</i></h3><p>Machine Learning / PyTorch<br />2025</p></div></a>
+        <a class="project project--small reveal-up" href="#contact"><div class="project__media"><img src="https://images.unsplash.com/photo-1531988042231-d39a9cc12a9a?auto=format&fit=crop&w=1400&q=85" alt="Colorful abstract material" /><span class="project__index">03</span><span class="project__view">View case study <b>+</b></span></div><div class="project__meta"><h3>FORMA<br /><i>Objects</i></h3><p>Commerce / Motion<br />2024</p></div></a>
+      </div>
+
       </div>
     </section>
 
-    <div class="transition transition--work" aria-hidden="true"><span>Credentials &amp; Vision</span><div class="transition__orbital"><i></i><b>+</b></div><span>Every detail has a reason</span><div class="transition__entry"><small>In focus</small><strong>Capabilities</strong></div><div class="transition__ticks"></div></div>
-
-    <!-- Skills -->
-    <section class="skills section" id="skills">
-      <div class="section-label reveal-up"><span>(03)</span><span>Capabilities</span></div>
-      <div class="skills__grid">
-        <div class="skills__intro reveal-up"><p>Where deep learning meets solid engineering foundation and global vision.</p><div class="orb orb--small" aria-hidden="true"></div></div>
-        <ul class="skills__list">
-          <li class="reveal-up"><span>01</span><strong>Natural Language Processing</strong><em>LLMs, Text Analysis &amp; Semantics</em></li>
-          <li class="reveal-up"><span>02</span><strong>Machine Learning</strong><em>Model Experiments &amp; Prototyping</em></li>
-          <li class="reveal-up"><span>03</span><strong>Software Fundamentals</strong><em>IT Engineering Certified Basics</em></li>
-          <li class="reveal-up"><span>04</span><strong>Global Communication</strong><em>TOEIC 865 Professional English</em></li>
-        </ul>
+    <!-- ▼ Approach → Interests（興味のある分野・技術） -->
+    <section class="manifesto" id="interest">
+      <div class="manifesto__orbit" aria-hidden="true"><span>NLP - DATA - MODELS - NLP - DATA - MODELS - </span><b>+</b></div>
+      <div class="manifesto__content">
+        <p class="eyebrow">(03) Interests</p>
+        <h2 class="reveal-up">Focus &<br /><i>curiosity.</i></h2>
+        <p class="manifesto__text reveal-up">テキストデータからの意味抽出、大規模言語モデルのメカニズム、そして言語理解を通じた新しい応用可能性に関心を持っています。</p>
       </div>
+      <ul class="capability-list">
+        <li class="reveal-up"><span>01</span><b>Natural Language Processing</b><em>大規模言語モデル・テキスト解析</em></li>
+        <li class="reveal-up"><span>02</span><b>Machine Learning / Deep Learning</b><em>PyTorch / 機械学習基盤</em></li>
+        <li class="reveal-up"><span>03</span><b>Software Development</b><em>Python / アルゴリズムの実装</em></li>
+      </ul>
     </section>
 
-    <div class="transition transition--skills" aria-hidden="true"><span>Intelligent systems</span><i></i><span>Precise execution</span><div class="transition__entry"><small>Open channel</small><strong>Contact</strong></div><div class="transition__ticks"></div></div>
-
-    <!-- Contact -->
-    <section class="contact section" id="contact">
-      <div class="section-label reveal-up"><span>(04)</span><span>Contact</span></div>
-      <p class="contact__kicker reveal-up">Got a cool project or idea?</p>
-      <a class="contact__email magnetic reveal-up" href="mailto:hello@akirue.dev">Let's build<br /><i>something.</i> <span>↗</span></a>
-      <div class="contact__footer reveal-up">
-        <p>Open for tech talk, collaboration,<br />or just talking about AI &amp; NLP.</p>
-        <div>
-          <a href="https://www.linkedin.com/in/%E6%98%8E%E7%91%A0-%E9%81%A0%E8%97%A4-668866425/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="https://github.com/akaru-endo" target="_blank" rel="noopener">Github ↗</a>
-        </div>
-        <span>© <span id="year"></span> A.E.</span>
+    <!-- ▼ Contact（控えめで謙虚な問い合わせフォーム） -->
+    <section class="contact" id="contact">
+      <div class="section-tag"><span>(04)</span><span>Contact</span><span>Open for dialogue</span></div>
+      <div class="contact__content">
+        <p class="contact__pre">研究のご指導、アドバイス、意見交換など、お気軽にご連絡いただけますと幸いです。</p>
+        <a class="contact__email magnetic" href="mailto:hello@akaruendo.com">Get in<br /><i>touch.</i><span>+</span></a>
       </div>
-      <div class="orb orb--contact" aria-hidden="true"></div>
-      <div class="contact__grid" aria-hidden="true"></div>
+      <footer class="footer">
+        <div><a href="mailto:hello@akaruendo.com">hello@akaruendo.com</a><a href="https://github.com" target="_blank" rel="noopener">Github</a></div>
+        <span>Mie, Japan</span><span>Copyright <span id="year"></span> Akaru Endo</span>
+      </footer>
     </section>
   </main>
   <script src="script.js"></script>
