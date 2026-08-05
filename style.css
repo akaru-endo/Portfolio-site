@@ -19,9 +19,9 @@ a{color:inherit;text-decoration:none}
 .wordmark span{font-family:var(--serif);font-weight:400}
 .wordmark sup{font:7px var(--mono);margin-left:2px}
 .nav{display:flex;gap:3rem;font:14px var(--mono);text-transform:uppercase}
-.nav a{position:relative}
-.nav a:after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:1px;background:currentColor;transition:width .3s}
-.nav a:hover:after{width:100%}
+.nav a, .footer a{position:relative; display:inline-block;} /* 要素が潰れないよう display を追加 */
+.nav a:after, .footer a:after{content:"";position:absolute;bottom:-3px;left:0;width:0;height:1px;background:currentColor;transition:width .3s}
+.nav a:hover:after, .footer a:hover:after{width:100%}
 .header__contact{justify-self:end;font:10px var(--mono);text-transform:uppercase}
 .header__contact span{display:inline-grid;place-items:center;width:18px;height:18px;margin-left:.35rem;border:1px solid;border-radius:50%;transition:transform .3s}
 .header__contact:hover span{transform:rotate(90deg);background:#fff;color:#000}
@@ -186,7 +186,7 @@ a{color:inherit;text-decoration:none}
 .contact__email span{display:inline-grid;place-items:center;width:.55em;aspect-ratio:1;margin-left:.04em;vertical-align:top;border:1px solid;border-radius:50%;font:400 .42em var(--sans);transition:color .3s,background .3s,transform .3s}
 .contact__email:hover span{color:#111;background:var(--lime);transform:rotate(90deg)}
 
-.footer{display:grid;grid-template-columns:1fr auto auto;gap:3rem;margin-top:13rem;padding-top:1rem;border-top:1px solid var(--line);font:9px/1.5 var(--mono);text-transform:uppercase}
+.footer{display:grid;grid-template-columns:1fr auto auto;gap:3rem;margin-top:13rem;padding-top:1rem;border-top:1px solid var(--line);font:13px/1.5 var(--mono);text-transform:uppercase}
 .footer div{display:flex;gap:1.1rem}
 .footer a:hover{color:var(--lime)}
 
@@ -273,6 +273,7 @@ a{color:inherit;text-decoration:none}
   .signal p{font-size:14vw}
   .contact__content{margin:9rem 0 0}
   .contact__email{font-size:18vw}
+  .footer{font:10px/1.5 var(--mono);}
   .footer{grid-template-columns:1fr;margin-top:8rem;gap:1rem}
   .footer div{flex-wrap:wrap}
   .cursor,.cursor-dot{display:none}
